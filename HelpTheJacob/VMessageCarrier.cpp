@@ -2,7 +2,7 @@
 
 #include <iostream>
 
-void VMessageCarrier::sendMessage(Message message)
+void VMessageCarrier::sendMessage(const Message& message) const
 {
 	std::cout << "Connecting to VMessage...\n";
 	std::cout << "Sending message to " << message.To << '\n';

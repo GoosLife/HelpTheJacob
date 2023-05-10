@@ -4,6 +4,8 @@ class HTMLConverter :
     public IConverter
 {
 public:
-    std::string convert(std::string& textToConvert);
+    HTMLConverter() {}
+    ~HTMLConverter() {}
+    void convert(std::string& textToConvert);
 };
 

@@ -2,7 +2,7 @@
 
 #include <iostream>
 
-void SMTPMessageCarrier::sendMessage(Message message)
+void SMTPMessageCarrier::sendMessage(const Message& message) const
 {
 	std::cout << "Connecting to the SMTP server...\n";
 	std::cout << "Sending message to " << message.To << '\n';

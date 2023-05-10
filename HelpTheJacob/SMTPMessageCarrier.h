@@ -4,6 +4,7 @@ class SMTPMessageCarrier :
     public IMessageCarrier
 {
 public:
-    void sendMessage(Message message);
+    SMTPMessageCarrier() {}
+    ~SMTPMessageCarrier() {}
+    void sendMessage(const Message& message) const;
 };
-

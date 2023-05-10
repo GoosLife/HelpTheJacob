@@ -2,13 +2,13 @@
 
 #include <string>
 
-Message::Message(std::string to, std::string from, std::string body, std::string subject, std::string cc) 
+Message::Message(const std::string& to, const std::string& from, const std::string& body, const std::string& subject, const std::string& cc) 
 {
-	To = to;
-	From = from;
-	Body = body;
-	Subject = subject;
-	Cc = cc;
+	To = std::move(to);
+	From = std::move(from);
+	Body = std::move(body);
+	Subject = std::move(subject);
+	Cc = std::move(cc);
 }
 
 Message::~Message() {}

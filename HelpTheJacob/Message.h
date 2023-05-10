@@ -5,7 +5,7 @@
 class Message
 {
 public:
-	Message(std::string to, std::string from, std::string body, std::string subject, std::string cc = NULL);
+	Message(const std::string& to, const std::string& from, const std::string& body, const std::string& subject, const std::string& cc = "");
 	~Message();
 
 	std::string To;
