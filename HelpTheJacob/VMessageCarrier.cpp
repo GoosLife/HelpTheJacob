@@ -5,7 +5,11 @@
 void VMessageCarrier::sendMessage(const Message& message) const
 {
 	std::cout << "Connecting to VMessage...\n";
-	std::cout << "Sending message to " << message.To << '\n';
+
+	for (std::string recipient : message.To) {
+		std::cout << recipient << '\n';
+	}
+
 	std::cout << "From: " << message.From << '\n';
 	std::cout << "Subject: " << message.Subject << '\n';
 	std::cout << "Body: " << message.Body << '\n';

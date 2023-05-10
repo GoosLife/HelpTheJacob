@@ -4,11 +4,20 @@
 
 Message::Message(const std::string& to, const std::string& from, const std::string& body, const std::string& subject, const std::string& cc) 
 {
-	To = std::move(to);
-	From = std::move(from);
-	Body = std::move(body);
-	Subject = std::move(subject);
-	Cc = std::move(cc);
+	To.push_back(to);
+	From = from;
+	Body = body;
+	Subject = subject;
+	Cc = cc;
+}
+
+Message::Message(const std::vector<std::string>& to, const std::string& from, const std::string& body, const std::string& subject, const std::string& cc)
+{
+	To = to;
+	From = from;
+	Body = body;
+	Subject = subject;
+	Cc = cc;
 }
 
 Message::~Message() {}
